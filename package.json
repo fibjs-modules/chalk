@@ -1,0 +1,56 @@
+{
+  "name": "@fibjs/chalk",
+  "version": "1.0.0",
+  "description": "chalk running on fibjs",
+  "types": "@types/index.d.ts",
+  "main": "./lib/index.js",
+  "scripts": {
+    "build": "fib-typify src -c .typifyrc.json -o lib",
+    "test": "fibjs test/index.js",
+    "ci": "npm run build && npm run test",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fibjs-modules/chalk.git"
+  },
+  "keywords": [
+    "fibjs",
+    "chalk"
+  ],
+  "author": "richardo2016@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fibjs-modules/chalk/issues"
+  },
+  "homepage": "https://github.com/fibjs-modules/chalk#readme",
+  "engines": {
+    "fibjs": ">=0.21.0"
+  },
+  "dependencies": {
+    "@fibjs/builtin-modules": "latest",
+    "chalk": "^2.4.2"
+  },
+  "devDependencies": {
+    "@fibjs/ci": "^2.3.0",
+    "@fibjs/types": "^0.27.1",
+    "fib-typify": "^0.6.0"
+  },
+  "peerDependencies": {
+    "@fibjs/builtin-modules": ">= 0.1",
+    "chalk": ">= 2.4.2 < 2.5"
+  },
+  "ci": {
+    "type": "travis",
+    "version": [
+      "0.21.0",
+      "0.22.0",
+      "0.23.0",
+      "0.24.0",
+      "0.25.0",
+      "0.26.0",
+      "0.26.1",
+      "0.27.0"
+    ]
+  }
+}
